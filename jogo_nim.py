@@ -64,16 +64,24 @@ def partida():
     if(jogada == 0):
         print()
         print('O computador ganhou!')
+        return 1
     else:
         print()
         print('Você ganhou!')
-
+        return 2
 
 def campeonato():
-    partida = 1
-    while(partida <= 3):
-        print('**** Rodada',partida,'****')
-        partida()
+    jogo = 1
+    placarCpu = 0
+    placarUser = 0
+    while(jogo <= 3):
+        print('**** Rodada',jogo,'****')
+        resultado = partida()
+        if( resultado == 1):
+            placarCpu = placarCpu + 1
+        else:
+            placarUser = placarUser + 1
+        jogo = jogo + 1
     print('Placar: Você',placarUser,'X',placarCpu,' Computador')
 
 if (escolha == 1):
