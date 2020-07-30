@@ -1,3 +1,4 @@
+#Programa com lógica do jogo NIM com vitória da CPU em todos os casos.
 
 print('Bem-vindo ao jogo do NIM! Escolha:')
 print()
